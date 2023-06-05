@@ -15,7 +15,8 @@ let jobSchema = mongoose.Schema({
     },
     applicants: {
         type: Array,
-        default: []
+        default: [{type:mongoose.Types.ObjectId}],
+        ref : 'User'
     },
     createdAt: {
         type: Date,
